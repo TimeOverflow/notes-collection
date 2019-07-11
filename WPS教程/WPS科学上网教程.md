@@ -16,7 +16,7 @@
 
 在Digital Ocean主页选择`Create—>Droplets`，如图所示。
 
-![创建Droplets](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\创建Droplets.PNG)
+![创建Droplets](.\图片\创建Droplets.PNG)
 
 
 
@@ -44,7 +44,7 @@
 
    选择主机所在地区，列出的地区如下图
 
-   ![主机所在地区选择](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\主机地区选择.PNG)
+   ![主机所在地区选择](.\图片\主机地区选择.PNG)
 
    实际对于一台特定的主机，并不是所有的区域都可以选择，不能选择的地区会显示为灰色。比如图中的纽约1号计方，旧金山1号机房和阿姆斯特丹2号机房都不可选。
 
@@ -64,17 +64,17 @@
 
    首先需要下载`PuTTY`，并安装，这一步不赘述。安装完成后在Windows开始菜单中看到的PuTTY系列如下图所示：
 
-   ![PuTTY菜单](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\PuTTY菜单.PNG)
+   ![PuTTY菜单](.\图片\PuTTY菜单.PNG)
 
    首先打开`PuTTYgen`，会看到如下所示的界面。
 
-   ![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\PuTTYgen.PNG)
+   ![](.\图片\PuTTYgen.PNG)
 
    `Type of key to generate`选择`RSA`，`Number of bits to generate key`设为`2048`即可。
 
    点击`Generate`按钮，出现进度条，此时正在产生密钥对，移动鼠标使得光标在空白区域随机移动，否则进度条会停滞不前，这样的目的是产生随机的独一无二的密钥对。
 
-   ![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\产生密钥对.PNG)
+   ![](.\图片\产生密钥对.PNG)
 
    完成后会出现上图界面。在`Key passphrase`中输入密码，并`Confirm passphrase`，这个是私钥的密码，也将是将来登录主机时需要输入的密码。
 
@@ -90,29 +90,29 @@
 
 到这一步就完成了一个big step了哦。可以点击`Create`按钮了。页面将跳转到Droplets，等进度条结束，就可以看到你的主机IP地址了，这标志着你已经有了一台自己的虚拟个人服务器（VPS）了。如下图所示（我有两个Droplets）：
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\InkedDroplets列表_LI.jpg)
+![](.\图片\InkedDroplets列表_LI.jpg)
 
 ### 登录主机
 
 现在就可以用`PuTTY`登录你的主机了。首先打开`PuTTY`（not `PuTTYgen`）。
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\PuTTY主界面.PNG)
+![](.\图片\PuTTY主界面.PNG)
 
 主界面就是这样子。在`Host Name (or IP address)`方框中填入自己的IP地址，`Port`就用默认的`22`。`Connection type`选择`SSH`。一切按照默认的来就行。
 
 接着选择`Connection->SSH->Auth`，如下所示：
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\PuTTY_Auth.PNG)
+![](.\图片\PuTTY_Auth.PNG)
 
 点击`Browse...`，选择之前保存的私钥ppk文件即可。之后再点击`Session`按钮，回到最初的起点。在`Saved Sessions`方框中输入一个名字，当然也是可以随便起的。点击`Save`按钮，就可以看到方框中出现了一个你刚刚的命名。以后每一次要登录主机，就双击你的`Session`名，点击`Load`，在点击`Open`即可。
 
 点击`Open`后，就会出现一个黑框（并没有眼镜）。等待几秒（也许不需要等待），就会出现`login as:`几个不大不小的字，在后面输入`root`，并按`Enter`键，会出现让你输入密码的界面。
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\Inked登录初始_LI.jpg)
+![](.\图片\Inked登录初始_LI.jpg)
 
 这里要输入的密码就是保存密钥时输入的密码。输入密码时屏幕上是什么都不显示的，（闭着眼睛）输入即可。输入完了`Enter`一下。这时你就登录上了你的主机了，界面如下所示：
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\Inked登录成功_LI.jpg)
+![](.\图片\Inked登录成功_LI.jpg)
 
 现在就可以准备安装科学上网的工具了。
 
@@ -221,13 +221,13 @@ shadowsocks start failed
 
 ### 客户端Shadowsocks配置
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\客户端ss.PNG)
+![](.\图片\客户端ss.PNG)
 
 如图所示，服务器IP、服务器端口、密码需要修改，填入`/etc/shadowsocks.json`配置文件里的东西就行了。点击`确定`按钮。
 
 客户端的Shadowsocks同样需要一些设置。
 
-![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\ss设置.PNG)
+![](.\图片\ss设置.PNG)
 
 + `系统代理模式`选择`PAC模式`
 
@@ -235,7 +235,7 @@ shadowsocks start failed
 
 + `PAC`那里可以选择`更新为GFWList`，稍等片刻会弹出提示更新成功。
 
-  ![](C:\Users\zhang\Desktop\MarkdownNotes\WPS教程\图片\更新PAC.PNG)
+  ![](.\图片\更新PAC.PNG)
 
   以上步骤结束，就可以打开浏览器试试[Google](www.google.com.hk)啦。
 
