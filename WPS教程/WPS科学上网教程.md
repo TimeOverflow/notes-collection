@@ -16,7 +16,7 @@
 
 在Digital Ocean主页选择`Create—>Droplets`，如图所示。
 
-![创建Droplets](.\图片\创建Droplets.PNG)
+![创建Droplets](./图片/创建Droplets.PNG)
 
 
 
